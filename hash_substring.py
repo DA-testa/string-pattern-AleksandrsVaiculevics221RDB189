@@ -17,7 +17,7 @@ def read_input():
                 # return both lines in one return
              
         else :
-            print("Wrong input, must be I or F")
+            print("Wrong input, must be I or F.")
         
     except ValueError:
         print("Wrong input, must be I or F")
