@@ -1,26 +1,28 @@
 # python3
 
 def read_input():
+    try:
     # this function needs to aquire input both from keyboard and file
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
-    input_name = input().upper()#.rstrip() # after input type choice
-    if input_name=="I":# read two lines
-        #first_input_pattern = ""
-        #second_input_text = ""
-        first_input_pattern = input().rstrip()  # first line is pattern 
-        second_input_text = input().rstrip() # second line is text in which to look for pattern
+        input_name = input().rstrip() # after input type choice
+        if input_name=='I':# read two lines
+            first_input_pattern = input().rstrip()  # first line is pattern 
+            second_input_text = input().rstrip() # second line is text in which to look for pattern
         
-    elif input_name=="F":
-        #file_num = input()
-        with open ("tests/"+"06", 'r') as testa_file:
-            first_input_pattern = testa_file.readline().rstrip()
-            second_input_text = testa_file.readline().rstrip()
-             # return both lines in one return
+        elif input_name=='F':
+            #file_num = input()
+            with open ("tests/"+"06", 'r') as testa_file:
+                first_input_pattern = testa_file.readline().rstrip()
+                second_input_text = testa_file.readline().rstrip()
+                # return both lines in one return
              
-    else :
+        else :
+            print("Wrong input, must be I or F")
+        
+    except ValueError:
         print("Wrong input, must be I or F")
         
-    return (first_input_pattern,second_input_text)# this is the sample return, notice the rstrip function
+    return first_input_pattern,second_input_text# this is the sample return, notice the rstrip function
 
 def print_occurrences(output):
     # this function should control output, it doesn't need any return
