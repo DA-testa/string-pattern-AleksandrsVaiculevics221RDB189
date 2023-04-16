@@ -9,8 +9,8 @@ def read_input():
         second_input_text = input().rstrip() # second line is text in which to look for pattern
         
     elif input_name=="F":
-        file_num = input()
-        with open ("tests/"+file_num, 'r') as testa_file:
+        #file_num = input()
+        with open ("tests/"+"06", 'r') as testa_file:
             first_input_pattern = testa_file.readline().rstrip()
             second_input_text = testa_file.readline().rstrip()
              # return both lines in one return
